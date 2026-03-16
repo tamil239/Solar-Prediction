@@ -1,0 +1,19 @@
+2026-02-25 15:02:42,585 - solar_prediction - INFO - Random seed set to 42
+2026-02-25 15:02:42,590 - solar_prediction - INFO - Random seed set to 42
+2026-02-25 15:02:42,590 - solar_prediction - INFO - Initializing SolarTrainer with device: cuda
+2026-02-25 15:02:42,590 - solar_prediction - INFO - Initialized SolarDataPreprocessor with window_size=24
+2026-02-25 15:02:42,590 - solar_prediction - INFO - Loading data from C:\Users\tamil\Downloads\solar_prediction_project\data\SolarPrediction.csv
+2026-02-25 15:02:42,663 - solar_prediction - INFO - Loaded 32,686 records from 2016-09-01 00:00:00 to 2016-12-31 00:00:00
+2026-02-25 15:02:42,845 - solar_prediction - INFO - Engineered features. New shape: (32686, 31)
+2026-02-25 15:02:42,887 - solar_prediction - INFO - Removed 838 outliers (2.56%)
+2026-02-25 15:02:42,909 - solar_prediction - INFO - Prepared 14 features: ['Temperature', 'Pressure', 'Humidity', 'Speed', 'WindDirection(Degrees)', 'Hour', 'Minute', 'TimeSin', 'TimeCos', 'DaylightMinutes', 'TimeSinceSunrise', 'IsDaytime', 'Temp_Humidity', 'Pressure_Temp']
+2026-02-25 15:02:43,005 - solar_prediction - INFO - Data split: Train=20358, Val=6664, Test=4754
+2026-02-25 15:02:43,021 - solar_prediction - INFO - Created dataloaders with batch size 32
+2026-02-25 15:02:43,021 - solar_prediction - INFO - Train batches: 637, Val batches: 209, Test batches: 149
+2026-02-25 15:02:43,024 - solar_prediction - INFO - Input dimension: 14
+2026-02-25 15:02:43,024 - solar_prediction - INFO - Using default params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.3, 'learning_rate': 0.00015, 'weight_decay': 1e-05, 'batch_size': 32, 'epochs': 100, 'patience': 30, 'gradient_clip': 1.0}
+2026-02-25 15:02:43,025 - solar_prediction - INFO - ==================================================
+2026-02-25 15:02:43,025 - solar_prediction - INFO - STARTING TRAINING
+2026-02-25 15:02:43,025 - solar_prediction - INFO - ==================================================
+2026-02-25 15:02:43,026 - solar_prediction - INFO - Training params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.3, 'learning_rate': 0.00015, 'weight_decay': 1e-05, 'batch_size': 32, 'epochs': 100, 'patience': 30, 'gradient_clip': 1.0}
+2026-02-25 15:02:43,038 - solar_prediction - INFO - Initialized WeatherLSTM with 823,425 parameters

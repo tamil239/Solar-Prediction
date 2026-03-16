@@ -1,0 +1,59 @@
+2026-02-25 15:01:51,342 - solar_prediction - INFO - Random seed set to 42
+2026-02-25 15:01:51,350 - solar_prediction - INFO - Random seed set to 42
+2026-02-25 15:01:51,350 - solar_prediction - INFO - Initializing SolarTrainer with device: cuda
+2026-02-25 15:01:51,351 - solar_prediction - INFO - Initialized SolarDataPreprocessor with window_size=24
+2026-02-25 15:01:51,351 - solar_prediction - INFO - Loading data from C:\Users\tamil\Downloads\solar_prediction_project\data\SolarPrediction.csv
+2026-02-25 15:01:51,445 - solar_prediction - INFO - Loaded 32,686 records from 2016-09-01 00:00:00 to 2016-12-31 00:00:00
+2026-02-25 15:01:51,611 - solar_prediction - INFO - Engineered features. New shape: (32686, 31)
+2026-02-25 15:01:51,657 - solar_prediction - INFO - Removed 838 outliers (2.56%)
+2026-02-25 15:01:51,667 - solar_prediction - INFO - Prepared 14 features: ['Temperature', 'Pressure', 'Humidity', 'Speed', 'WindDirection(Degrees)', 'Hour', 'Minute', 'TimeSin', 'TimeCos', 'DaylightMinutes', 'TimeSinceSunrise', 'IsDaytime', 'Temp_Humidity', 'Pressure_Temp']
+2026-02-25 15:01:51,750 - solar_prediction - INFO - Data split: Train=20358, Val=6664, Test=4754
+2026-02-25 15:01:51,764 - solar_prediction - INFO - Created dataloaders with batch size 32
+2026-02-25 15:01:51,767 - solar_prediction - INFO - Train batches: 637, Val batches: 209, Test batches: 149
+2026-02-25 15:01:51,767 - solar_prediction - INFO - Input dimension: 14
+2026-02-25 15:01:51,769 - solar_prediction - INFO - Using default params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.3, 'learning_rate': 0.00015, 'weight_decay': 1e-05, 'batch_size': 32, 'epochs': 100, 'patience': 30, 'gradient_clip': 1.0}
+2026-02-25 15:01:51,769 - solar_prediction - INFO - ==================================================
+2026-02-25 15:01:51,769 - solar_prediction - INFO - STARTING TRAINING
+2026-02-25 15:01:51,769 - solar_prediction - INFO - ==================================================
+2026-02-25 15:01:51,769 - solar_prediction - INFO - Training params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.3, 'learning_rate': 0.00015, 'weight_decay': 1e-05, 'batch_size': 32, 'epochs': 100, 'patience': 30, 'gradient_clip': 1.0}
+2026-02-25 15:01:51,780 - solar_prediction - INFO - Initialized WeatherLSTM with 823,425 parameters
+2026-02-25 15:03:26,128 - solar_prediction - INFO - Epoch  10/100 | Train Loss: 0.037732 | Val Loss: 0.023724 | LR: 1.47e-04 | Time: 11.42s
+2026-02-25 15:04:49,822 - solar_prediction - INFO - Epoch  20/100 | Train Loss: 0.033876 | Val Loss: 0.023043 | LR: 1.37e-04 | Time: 8.52s
+2026-02-25 15:06:12,936 - solar_prediction - INFO - Epoch  30/100 | Train Loss: 0.031125 | Val Loss: 0.025256 | LR: 1.21e-04 | Time: 8.47s
+2026-02-25 15:07:35,983 - solar_prediction - INFO - Epoch  40/100 | Train Loss: 0.029542 | Val Loss: 0.022379 | LR: 1.00e-04 | Time: 8.37s
+2026-02-25 15:08:57,933 - solar_prediction - INFO - Epoch  50/100 | Train Loss: 0.028577 | Val Loss: 0.022895 | LR: 7.74e-05 | Time: 8.33s
+2026-02-25 15:10:20,496 - solar_prediction - INFO - Epoch  60/100 | Train Loss: 0.027072 | Val Loss: 0.023797 | LR: 5.41e-05 | Time: 7.89s
+2026-02-25 15:10:53,301 - solar_prediction - INFO - Early stopping triggered at epoch 64
+2026-02-25 15:10:53,341 - solar_prediction - INFO - Loaded best model from early stopping
+2026-02-25 15:10:53,898 - solar_prediction - INFO - Final test loss: 0.027405
+2026-02-25 15:10:53,952 - solar_prediction - INFO - Model saved to C:\Users\tamil\Downloads\solar_prediction_project\models\best_model.pth
+2026-02-25 15:10:53,959 - solar_prediction - INFO - ==================================================
+2026-02-25 15:10:53,959 - solar_prediction - INFO - STARTING EVALUATION
+2026-02-25 15:10:53,959 - solar_prediction - INFO - ==================================================
+2026-02-25 15:10:54,870 - solar_prediction - INFO - 
+==================================================
+2026-02-25 15:10:54,870 - solar_prediction - INFO - SCALED METRICS:
+2026-02-25 15:10:54,870 - solar_prediction - INFO - ==================================================
+2026-02-25 15:10:54,871 - solar_prediction - INFO - MAE                 : 0.110268
+2026-02-25 15:10:54,871 - solar_prediction - INFO - MSE                 : 0.027444
+2026-02-25 15:10:54,871 - solar_prediction - INFO - RMSE                : 0.165663
+2026-02-25 15:10:54,871 - solar_prediction - INFO - R2                  : 0.536910
+2026-02-25 15:10:54,871 - solar_prediction - INFO - ExplainedVariance   : 0.538666
+2026-02-25 15:10:54,872 - solar_prediction - INFO - MAPE                : 35052.838135
+2026-02-25 15:10:54,872 - solar_prediction - INFO - MaxError            : 0.781078
+2026-02-25 15:10:54,873 - solar_prediction - INFO - 
+==================================================
+2026-02-25 15:10:54,873 - solar_prediction - INFO - ORIGINAL SCALE METRICS (Watts/m²):
+2026-02-25 15:10:54,873 - solar_prediction - INFO - ==================================================
+2026-02-25 15:10:54,874 - solar_prediction - INFO - MAE                 : 126.71 W/m²
+2026-02-25 15:10:54,874 - solar_prediction - INFO - MSE                 : 36238.37 W/m²
+2026-02-25 15:10:54,874 - solar_prediction - INFO - RMSE                : 190.36 W/m²
+2026-02-25 15:10:54,874 - solar_prediction - INFO - R2                  : 0.5369
+2026-02-25 15:10:54,874 - solar_prediction - INFO - ExplainedVariance   : 0.5387
+2026-02-25 15:10:54,874 - solar_prediction - INFO - MAPE                : 3430.13%
+2026-02-25 15:10:54,875 - solar_prediction - INFO - MaxError            : 897.54 W/m²
+2026-02-25 15:10:54,878 - solar_prediction - INFO - Correlation         : 0.7341
+2026-02-25 15:10:54,878 - solar_prediction - INFO - 
+Estimating uncertainty with Monte Carlo Dropout...
+2026-02-25 15:10:55,267 - solar_prediction - INFO - Average prediction uncertainty: ±47.95 W/m²
+2026-02-25 15:10:58,313 - solar_prediction - INFO - Plot saved to C:\Users\tamil\Downloads\solar_prediction_project\results\predictions_plot.png
